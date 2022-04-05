@@ -1,0 +1,47 @@
+[versions]
+androidToolsPlugin = "7.1.2"
+kotlin = "1.5.21"
+
+assertJ = "3.18.1"
+elmyr = "1.3.1"
+mockitoKotlin = "2.2.0"
+
+jUnitJupiter = "5.7.1"
+jUnitPlatform = "1.7.1"
+jUnitVintage = "5.7.1"
+jUnitMockitoExt = "3.4.6"
+
+[libraries]
+
+androidToolsPluginGradle = { module = "com.android.tools.build:gradle", version.ref = "androidToolsPlugin" }
+kotlinPluginGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+jUnitPlatform = { module = "org.junit.platform:junit-platform-launcher", version.ref = "jUnitPlatform" }
+jUnitJupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jUnitJupiter" }
+jUnitVintageEngine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "jUnitVintage" }
+jUnitMockitoExt = { module = "org.mockito:mockito-junit-jupiter", version.ref = "jUnitMockitoExt" }
+
+assertJ = { module = "org.assertj:assertj-core", version.ref = "assertJ" }
+
+elmyr = { module = "com.github.xgouchet.Elmyr:core", version.ref = "elmyr" }
+elmyrInject = { module = "com.github.xgouchet.Elmyr:inject", version.ref = "elmyr" }
+elmyrJUnit4 = { module = "com.github.xgouchet.Elmyr:junit4", version.ref = "elmyr" }
+elmyrJUnit5 = { module = "com.github.xgouchet.Elmyr:junit5", version.ref = "elmyr" }
+elmyrJVM = { module = "com.github.xgouchet.Elmyr:jvm", version.ref = "elmyr" }
+
+[bundles]
+
+jUnit5 = [
+    "jUnitPlatform",
+    "jUnitJupiter",
+    "jUnitVintageEngine",
+    "jUnitMockitoExt"
+]
+
+elmyr = [
+    "elmyr",
+    "elmyrInject",
+    "elmyrJUnit5",
+    "elmyrJVM"
+]
