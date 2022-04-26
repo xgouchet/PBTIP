@@ -39,3 +39,7 @@ dependencies {
     testImplementation(libs.bundles.elmyr)
     testImplementation(libs.assertJ)
 }
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+}

@@ -8,6 +8,6 @@ class Calculator {
      * @return the sum of a and b.
      */
     fun add(a: Int, b: Int): Int {
-        TODO("Implement a+b")
+        return a + b
     }
 }
