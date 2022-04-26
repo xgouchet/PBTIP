@@ -7,7 +7,7 @@ class RemoteDataSource(
     fun logIn(
         email: String,
         password: String,
-    ): Result<Boolean> {
+    ): Result<User> {
         TODO()
     }
 }
